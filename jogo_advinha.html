@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) {
+        return peso / (altura * altura);
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+        var chute = parseInt(prompt("Qual número você pensou?"));
+        
+        if(chute == numeroPensado) {
+        
+            mostra("Você ACERTOU! O número pensado era " + numeroPensado + ".");
+            break;
+        } else {
+        
+        mostra("Você ERROU!");
+        }
+
+        tentativas++
+    }
+
+    mostra("Fim!")    
+
+
+</script>
